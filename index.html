@@ -5,316 +5,446 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kirti Srivastava | Portfolio</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
+
+/* ---------- GLOBAL ---------- */
 
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial, Helvetica, sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
 }
 
 body{
-background:#f7f9fc;
-color:#333;
+font-family:'Poppins',sans-serif;
+background:#0f1117;
+color:#e6e6e6;
 line-height:1.6;
 }
 
-.container{
-width:90%;
-max-width:1100px;
-margin:auto;
-padding:40px 0;
+:root{
+--accent:#6c7cff;
+--card:#171a23;
 }
 
-header{
-background:#111827;
-color:white;
-padding:60px 20px;
-text-align:center;
-}
-
-header img{
-width:140px;
-height:140px;
-border-radius:50%;
-object-fit:cover;
-margin-bottom:20px;
-border:4px solid white;
-}
-
-header h1{
-font-size:32px;
-margin-bottom:10px;
-}
-
-header p{
-font-size:18px;
-opacity:0.9;
-}
+/* ---------- NAVBAR ---------- */
 
 nav{
-margin-top:20px;
+position:fixed;
+top:0;
+width:100%;
+background:rgba(15,17,23,0.95);
+backdrop-filter:blur(8px);
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 10%;
+z-index:1000;
+}
+
+.logo{
+font-weight:600;
+font-size:20px;
+color:white;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:30px;
 }
 
 nav a{
-color:white;
 text-decoration:none;
-margin:0 15px;
-font-size:16px;
+color:#d9d9d9;
+font-size:15px;
+transition:0.3s;
 }
 
 nav a:hover{
-text-decoration:underline;
+color:var(--accent);
 }
+
+/* ---------- HERO ---------- */
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:120px 20px 80px 20px;
+}
+
+.hero h1{
+font-size:48px;
+margin-bottom:10px;
+}
+
+.hero span{
+color:var(--accent);
+}
+
+.hero p{
+max-width:650px;
+margin:auto;
+margin-bottom:30px;
+opacity:0.8;
+}
+
+.btn{
+display:inline-block;
+padding:12px 28px;
+background:var(--accent);
+color:white;
+border-radius:6px;
+text-decoration:none;
+font-size:14px;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:translateY(-2px);
+}
+
+/* ---------- SECTIONS ---------- */
 
 section{
-padding:60px 0;
+padding:90px 10%;
 }
 
-h2{
+.section-title{
 font-size:28px;
-margin-bottom:25px;
-color:#111827;
-border-left:5px solid #4f46e5;
-padding-left:12px;
+margin-bottom:40px;
+position:relative;
+display:inline-block;
 }
+
+.section-title::after{
+content:"";
+width:50%;
+height:3px;
+background:var(--accent);
+position:absolute;
+left:0;
+bottom:-8px;
+}
+
+/* ---------- ABOUT ---------- */
 
 .about p{
-font-size:16px;
 max-width:750px;
+opacity:0.85;
 }
+
+/* ---------- SKILLS ---------- */
 
 .skills-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
 gap:20px;
 }
 
-.skill-box{
-background:white;
+.skill{
+background:var(--card);
 padding:20px;
 border-radius:8px;
-box-shadow:0 2px 8px rgba(0,0,0,0.08);
+transition:0.3s;
 }
 
-.experience, .projects{
+.skill:hover{
+transform:translateY(-6px);
+}
+
+/* ---------- PROJECTS ---------- */
+
+.projects-grid{
 display:grid;
-gap:20px;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
 }
 
-.card{
-background:white;
-padding:20px;
-border-radius:8px;
-box-shadow:0 2px 8px rgba(0,0,0,0.08);
+.project{
+background:var(--card);
+padding:25px;
+border-radius:10px;
+transition:0.3s;
 }
 
-.card h3{
+.project:hover{
+transform:translateY(-6px);
+}
+
+.project h3{
 margin-bottom:10px;
-color:#4f46e5;
+color:white;
 }
 
-.card ul{
-padding-left:20px;
-margin-top:10px;
+.project p{
+font-size:14px;
+opacity:0.8;
 }
 
-.contact{
-text-align:center;
-}
+/* ---------- CONTACT ---------- */
 
 .contact p{
 margin:8px 0;
 }
 
 .contact a{
-color:#4f46e5;
+color:var(--accent);
 text-decoration:none;
 }
 
+/* ---------- FOOTER ---------- */
+
 footer{
 text-align:center;
-padding:20px;
-background:#111827;
-color:white;
-margin-top:40px;
+padding:40px 20px;
+opacity:0.6;
+font-size:14px;
 }
+
+/* ---------- ANIMATION ---------- */
+
+.reveal{
+opacity:0;
+transform:translateY(40px);
+transition:all 0.8s ease;
+}
+
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
+
+/* ---------- MOBILE ---------- */
 
 @media(max-width:768px){
 
-header h1{
-font-size:26px;
+.hero h1{
+font-size:34px;
 }
 
-nav a{
-display:inline-block;
-margin:8px;
+nav ul{
+gap:18px;
+}
+
+section{
+padding:80px 7%;
 }
 
 }
 
 </style>
-
 </head>
+
 <body>
 
-<header>
-
-<img src="Kirti.jpeg" alt="Kirti Srivastava">
-
-<h1>Kirti Srivastava</h1>
-<p>Data Science & AI Student | Python | SQL | Data Analysis</p>
+<!-- NAVBAR -->
 
 <nav>
-<a href="#about">About</a>
-<a href="#skills">Skills</a>
-<a href="#experience">Experience</a>
-<a href="#projects">Projects</a>
-<a href="#contact">Contact</a>
+
+<div class="logo">Kirti</div>
+
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
 </nav>
 
-</header>
 
-<section id="about">
-<div class="container about">
+<!-- HERO -->
 
-<h2>About</h2>
+<section class="hero">
+
+<div>
+
+<h1>Hello, I'm <span>Kirti Srivastava</span></h1>
 
 <p>
-Detail-oriented BCA student specializing in Data Science & Artificial Intelligence with hands-on
-experience in SQL, Python-based data analysis, and data visualization. Seeking internship or job
-opportunities to contribute analytical skills in a data-driven governance environment.
-Interested in large-scale public datasets and data-driven governance.
+BCA student specializing in Data Science & Artificial Intelligence.
+I enjoy working with data, building analytical solutions, and exploring
+real-world datasets to generate meaningful insights.
 </p>
 
+<a class="btn" href="#projects">View Projects</a>
+
 </div>
+
 </section>
 
-<section id="skills">
-<div class="container">
 
-<h2>Skills</h2>
+<!-- ABOUT -->
+
+<section id="about" class="about reveal">
+
+<h2 class="section-title">About Me</h2>
+
+<p>
+I am currently pursuing a Bachelor of Computer Applications in Data Science
+and Artificial Intelligence at Babu Banarasi Das University, Lucknow.
+My interests lie in data analytics, machine learning, and working with
+large-scale public datasets. I enjoy transforming raw data into useful
+insights using Python, SQL, and visualization tools.
+</p>
+
+</section>
+
+
+<!-- SKILLS -->
+
+<section id="skills" class="reveal">
+
+<h2 class="section-title">Skills</h2>
 
 <div class="skills-grid">
 
-<div class="skill-box">
+<div class="skill">
 <h3>Programming</h3>
 <p>Python, SQL</p>
 </div>
 
-<div class="skill-box">
-<h3>Libraries & Frameworks</h3>
+<div class="skill">
+<h3>Libraries</h3>
 <p>pandas, NumPy, scikit-learn, Matplotlib</p>
 </div>
 
-<div class="skill-box">
+<div class="skill">
 <h3>Data Tools</h3>
 <p>MySQL, Jupyter Notebook, Power BI</p>
 </div>
 
-<div class="skill-box">
+<div class="skill">
 <h3>Other Tools</h3>
-<p>MS Excel, Word, PowerPoint</p>
+<p>Excel, PowerPoint, Word</p>
 </div>
 
-<div class="skill-box">
+<div class="skill">
 <h3>Soft Skills</h3>
-<p>Leadership, Communication, Analytical Thinking, Problem Solving, Team Collaboration, Time Management</p>
+<p>Leadership, Communication, Analytical Thinking, Team Collaboration</p>
 </div>
 
 </div>
 
-</div>
 </section>
 
-<section id="experience">
-<div class="container">
 
-<h2>Education</h2>
+<!-- PROJECTS -->
 
-<div class="experience">
+<section id="projects" class="reveal">
 
-<div class="card">
-<h3>Bachelor of Computer Applications – Data Science & Artificial Intelligence</h3>
-<p>Babu Banarasi Das University, Lucknow</p>
-<p>2023 – 2026 | Current SGPA: 8.38 (up to 4th semester)</p>
-</div>
+<h2 class="section-title">Projects</h2>
 
-<div class="card">
-<h3>Class 12 – Science (PCM + Computer Application)</h3>
-<p>Montfort Inter College, Lucknow</p>
-<p>2022 – 2023 | Percentage: 82.6%</p>
-</div>
+<div class="projects-grid">
 
-<div class="card">
-<h3>Class 10 – CBSE Board</h3>
-<p>Montfort Inter College, Lucknow</p>
-<p>2020 – 2021 | Percentage: 93.0%</p>
-</div>
+<div class="project">
+
+<h3>Sales Dashboard & Forecasting</h3>
+
+<p>
+Analyzed sales, profit, quantity, and shipping performance using Power BI.
+Implemented time-series analysis and a 15-day forecast to identify trends
+and enable data-driven decision making.
+</p>
 
 </div>
 
-</div>
-</section>
+<div class="project">
 
-<section id="projects">
-<div class="container">
-
-<h2>Projects</h2>
-
-<div class="projects">
-
-<div class="card">
-<h3>Super Store Sales Dashboard & Forecasting (Power BI)</h3>
-<ul>
-<li>Analyzed sales, profit, quantity, and shipping performance.</li>
-<li>Created KPIs, YoY comparisons, and visual insights across regions, categories, and segments.</li>
-<li>Performed time-series analysis with a 15-day sales forecast.</li>
-<li>Used filters, slicers, and state-level analysis for interactive insights.</li>
-</ul>
-</div>
-
-<div class="card">
 <h3>COVID-19 SQL Data Exploration</h3>
-<ul>
-<li>Performed data cleaning and ensured type safety using TRY_CAST.</li>
-<li>Used window functions to compute rolling vaccination totals.</li>
-<li>Implemented join logic between CovidDeaths and CovidVaccinations tables.</li>
-</ul>
-</div>
 
-<div class="card">
-<h3>Heart Failure Prediction Web App</h3>
-<ul>
-<li>Developed using Python, Flask, scikit-learn, and pandas.</li>
-<li>Built a Random Forest model to predict heart failure risk.</li>
-<li>Integrated the ML model with a Flask web application and HTML interface.</li>
-</ul>
-</div>
+<p>
+Performed SQL-based data cleaning, joins, and rolling vaccination analysis
+using window functions to explore global COVID-19 datasets.
+</p>
 
 </div>
 
+<div class="project">
+
+<h3>Heart Failure Prediction App</h3>
+
+<p>
+Developed a machine learning web app using Python, Flask, and Random Forest
+to predict heart failure risk with a simple HTML interface.
+</p>
+
 </div>
+
+</div>
+
 </section>
 
-<section id="contact">
-<div class="container contact">
 
-<h2>Contact</h2>
+<!-- CONTACT -->
+
+<section id="contact" class="contact reveal">
+
+<h2 class="section-title">Contact</h2>
 
 <p>Email: <a href="mailto:kirtisri.vin19@gmail.com">kirtisri.vin19@gmail.com</a></p>
-<p>Phone: <a href="tel:+918726542440">+91 8726542440</a></p>
-<p>LinkedIn: <a href="https://www.linkedin.com/in/kirti-srivastava-16a7a3290/" target="_blank">View Profile</a></p>
-<p>GitHub: <a href="https://github.com/kirti-050" target="_blank">github.com/kirti-050</a></p>
-<p>Location: Lucknow, Uttar Pradesh</p>
 
-</div>
+<p>Phone: <a href="tel:+918726542440">+91 8726542440</a></p>
+
+<p>LinkedIn:
+<a href="https://www.linkedin.com/in/kirti-srivastava-16a7a3290/" target="_blank">
+linkedin.com/in/kirti-srivastava
+</a>
+</p>
+
+<p>GitHub:
+<a href="https://github.com/kirti-050" target="_blank">
+github.com/kirti-050
+</a>
+</p>
+
 </section>
 
+
 <footer>
-<p>© 2026 Kirti Srivastava | Portfolio</p>
+
+© 2026 Kirti Srivastava
+
 </footer>
+
+
+<script>
+
+/* Scroll Reveal Animation */
+
+function reveal(){
+
+let reveals=document.querySelectorAll(".reveal");
+
+for(let i=0;i<reveals.length;i++){
+
+let windowHeight=window.innerHeight;
+let elementTop=reveals[i].getBoundingClientRect().top;
+let visible=100;
+
+if(elementTop<windowHeight-visible){
+reveals[i].classList.add("active");
+}
+
+}
+
+}
+
+window.addEventListener("scroll",reveal);
+
+reveal();
+
+</script>
 
 </body>
 </html>
