@@ -1,76 +1,150 @@
 # Personal Portfolio Website
 
-A modern, responsive personal portfolio website built using **pure HTML, CSS, and JavaScript**.
-This website showcases my skills, projects, and contact information in a clean and minimal dark-themed design.
+## Overview
 
-## About the Project
+This is my personal portfolio website built using HTML, CSS, and JavaScript.
 
-This portfolio was created to present my work, technical skills, and projects as a **Data Science & Artificial Intelligence student**. The goal was to build a fast, lightweight, and visually appealing website without using any frameworks.
+The portfolio showcases my background as a Data Science & AI student, highlights my data analytics projects, and serves as a central hub for recruiters and collaborators to explore my work.
 
-The website is designed to be simple, professional, and mobile responsive while maintaining fast load times.
+## About Me
 
-## Features
+I am a BCA (Data Science & AI) student at Babu Banarasi Das University, Lucknow, with hands-on experience in:
 
-* Dark theme with accent color
-* Smooth scroll animations
-* Fully responsive design for mobile and desktop
-* Clean and modern layout
-* Interactive project cards
-* Smooth section reveal animations
-* Fast loading with no heavy frameworks
+* Python
+* SQL
+* Power BI
+* Streamlit
+* Machine Learning
+* Data Analysis
+* Forecasting
 
-## Sections Included
-
-* About Me
-* Skills
-* Projects
-* Contact
-
-## Technologies Used
-
-* HTML5
-* CSS3
-* JavaScript (Vanilla JS)
-* Google Fonts
-
-## Projects Highlighted
-
-Some of the projects featured in this portfolio include:
-
-* **Sales Dashboard & Forecasting (Power BI)**
-  A data visualization dashboard analyzing sales, profit, and trends with forecasting.
-
-* **COVID-19 SQL Data Exploration**
-  SQL-based analysis using joins, window functions, and rolling vaccination statistics.
-
-* **Heart Failure Prediction Web App**
-  Machine learning web application built using Python, Flask, and Random Forest.
-
-## How to Run the Project
-
-1. Download or clone this repository
-2. Open the project folder
-3. Open `index.html` in your browser
-
-No additional setup or installation is required.
-
-## Future Improvements
-
-* Add more projects
-* Improve animations and UI effects
-* Deploy the website online
-* Add a downloadable resume
-
-## Author
-
-**Kirti Srivastava**
-
-Data Science & AI Student
-Lucknow, Uttar Pradesh
-
-GitHub: https://github.com/kirti-050
-LinkedIn: https://www.linkedin.com/in/kirti-srivastava-16a7a3290/
+My interests include analytics, predictive modeling, business intelligence, and transforming large datasets into actionable insights.
 
 ---
 
-⭐ If you like this project, feel free to give it a star.
+## Featured Projects
+
+### Delhi Metro Network & Ridership Insights
+
+**Tech Stack:** Python, SQL, Power BI, Streamlit
+
+Key Highlights:
+
+* Analyzed 150,000+ metro trip records
+* Processed approximately 30 lakh passengers
+* Analyzed ₹31.5 crore revenue
+* Engineered 7 analytical features
+* Built forecasting models using SARIMA
+* Implemented anomaly detection using Z-score analysis
+* Deployed an interactive Streamlit application
+* Developed Power BI dashboards with KPI cards, slicers, and heatmaps
+
+---
+
+### Heart Failure Prediction Web App
+
+**Tech Stack:** Python, Flask, Scikit-Learn
+
+Key Highlights:
+
+* Built a Random Forest classification model
+* Performed preprocessing and feature engineering
+* Developed an interactive Flask-based web interface
+* Enabled real-time heart failure risk prediction
+
+---
+
+### COVID-19 SQL Data Analysis
+
+**Tech Stack:** SQL, MySQL, Excel
+
+Key Highlights:
+
+* Data cleaning and transformation
+* SQL joins and aggregations
+* Window functions and rolling calculations
+* Vaccination trend analysis
+* Regional case statistics reporting
+
+---
+
+## Skills
+
+### Programming
+
+* Python
+* SQL
+
+### Libraries
+
+* Pandas
+* NumPy
+* Scikit-Learn
+* Matplotlib
+* Statsmodels
+
+### Tools
+
+* Power BI
+* Streamlit
+* MySQL
+* Jupyter Notebook
+* Microsoft Excel
+
+### Core Competencies
+
+* Data Analysis
+* Data Visualization
+* Forecasting
+* Anomaly Detection
+* Machine Learning
+* Dashboard Development
+
+---
+
+## Education
+
+### Bachelor of Computer Applications (Data Science & AI)
+
+Babu Banarasi Das University, Lucknow
+
+2023 – 2026
+
+Current SGPA: 8.76 (up to 5th semester)
+
+---
+
+## Features
+
+* Fully Responsive Design
+* Dark Theme UI
+* Smooth Scroll Animations
+* Interactive Project Cards
+* Mobile Friendly Layout
+* Fast Loading Performance
+
+---
+
+## Contact
+
+Email: [kirtisri.vin19@gmail.com](mailto:kirtisri.vin19@gmail.com)
+
+GitHub: https://github.com/kirti-050
+
+LinkedIn: https://www.linkedin.com/in/kirti-srivastava-16a7a3290/
+
+Location: Lucknow, Uttar Pradesh, India
+
+---
+
+## Future Enhancements
+
+* Project case studies
+* Interactive Power BI report embeds
+* Blog section for analytics projects
+* Resume download integration
+* Project filtering by technology
+
+---
+
+⭐ Feel free to explore the portfolio and connect with me.
